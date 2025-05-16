@@ -1,0 +1,7 @@
+fastapi[standard]
+transformers
+redis
+fastapi-cache2
+pydantic
+locust
+torch

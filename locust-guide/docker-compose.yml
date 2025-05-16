@@ -1,0 +1,6 @@
+services:
+  api:
+    build: .
+    container_name: fastapi_locust_example
+    ports:
+      - "8000:8000"
