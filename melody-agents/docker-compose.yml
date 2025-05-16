@@ -1,0 +1,14 @@
+services:
+  suno-api:
+    build:
+      context: .
+      dockerfile: Dockerfile.suno
+    ports:
+      - "3000:3000"
+  streamlit-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8501:8501"
+    depends_on: [suno-api]

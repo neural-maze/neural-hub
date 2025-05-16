@@ -1,0 +1,8 @@
+settings:
+  docker:
+    requirements: requirements.txt
+
+steps:
+  sample_dataset:
+    parameters:
+      sample_size: 3000

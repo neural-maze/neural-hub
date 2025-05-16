@@ -1,0 +1,5 @@
+streamlit
+facenet-pytorch
+qdrant-client
+python-dotenv
+pydantic-settings

@@ -1,0 +1,21 @@
+steps:
+# Build the container image
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', '$LOCATION-docker.pkg.dev/$PROJECT_ID/vector-twin-app/app:latest', '-f', 'src/app/Dockerfile', '.']
+# Push the container image to Artifact Registry
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', '$LOCATION-docker.pkg.dev/$PROJECT_ID/vector-twin-app/app:latest']
+# Deploy container image to Cloud Run
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: gcloud
+  args: ['run', 'deploy', 'vector-twin', 
+  '--image', '$LOCATION-docker.pkg.dev/$PROJECT_ID/vector-twin-app/app:latest', 
+  '--port', '8501',
+  '--region', '$LOCATION',
+  '--platform', 'managed',
+  '--project', '$PROJECT_ID',
+  '--memory', '2Gi',
+  '--update-secrets', 'QDRANT_API_KEY=QDRANT_API_KEY:latest,QDRANT_URL=QDRANT_URL:latest'
+  ]
+images:
+- $LOCATION-docker.pkg.dev/$PROJECT_ID/vector-twin-app/app:latest

@@ -1,0 +1,5 @@
+zenml[server]==0.68.1
+datasets
+facenet-pytorch
+qdrant-client
+tqdm
