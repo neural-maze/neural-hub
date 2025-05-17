@@ -11,7 +11,6 @@
 
 ## Table of Contents
 
-- [What is The Neural Hub?](#what-is-the-neural-hub)
 - [Projects](#projects)
 - [Contributors](#contributors)
 - [License](#license)
