@@ -1,0 +1,5 @@
+crewai==0.28.8
+crewai-tools==0.2.3
+langchain-core==0.1.45
+langchain-openai==0.0.5
+python-dotenv==1.0.0

@@ -1,9 +1,0 @@
-__pycache__
-.venv/
-.vscode/
-.env.example
-.gitignore
-docker-compose.yml
-Dockerfile
-Dockerfile.suno
-README.md
