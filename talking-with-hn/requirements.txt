@@ -1,6 +1,0 @@
-streamlit>=1.26.0
-openai
-langchain
-pillow
-pydantic
-beautifulsoup4
